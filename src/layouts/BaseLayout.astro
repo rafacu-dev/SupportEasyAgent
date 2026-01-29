@@ -15,8 +15,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const { 
-  title = t('site.title'), 
-  description = t('site.description')
+  title = t('nav.home'), 
+  description = t('hero.description')
 } = Astro.props;
 ---
 

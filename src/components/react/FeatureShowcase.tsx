@@ -1,42 +1,42 @@
 import { motion } from 'motion/react';
-import { Warehouse, Truck, Package, BarChart3, Shield, Headphones } from 'lucide-react';
+import { Phone, Calendar, MessageSquare, BarChart3, Clock, Headphones } from 'lucide-react';
 
 const features = [
   {
-    icon: Warehouse,
-    title: 'Advanced Warehousing',
-    description: 'Climate-controlled facilities with automated inventory systems and 24/7 security.',
-    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=Warehousing' },
+    icon: Phone,
+    title: 'Agente de Voz con IA',
+    description: 'Tu asistente virtual atiende llamadas 24/7 con voz natural y conversaciones profesionales.',
+    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=Agente+IA' },
   },
   {
-    icon: Truck,
-    title: 'Fast Transportation',
-    description: 'Multi-modal logistics network ensuring rapid delivery across all destinations.',
-    image: { src: 'https://placehold.co/800x600/f43f5e/ffffff?text=Transportation' },
+    icon: Calendar,
+    title: 'Agenda Automática',
+    description: 'El agente programa citas automáticamente y envía recordatorios a ti y tus clientes.',
+    image: { src: 'https://placehold.co/800x600/f43f5e/ffffff?text=Calendario' },
   },
   {
-    icon: Package,
-    title: 'Quality Manufacturing',
-    description: 'ISO-certified production with precision engineering and quality control.',
-    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=Manufacturing' },
+    icon: MessageSquare,
+    title: 'Transcripciones Completas',
+    description: 'Recibe transcripciones detalladas de cada llamada con análisis de sentimiento incluido.',
+    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=Transcripciones' },
   },
   {
     icon: BarChart3,
-    title: 'Real-Time Analytics',
-    description: 'Complete supply chain visibility with advanced tracking and reporting.',
+    title: 'Análisis en Tiempo Real',
+    description: 'Visualiza estadísticas de llamadas, horarios pico y métricas de rendimiento al instante.',
     image: { src: 'https://placehold.co/800x600/f43f5e/ffffff?text=Analytics' },
   },
   {
-    icon: Shield,
-    title: 'Secure Operations',
-    description: 'Industry-leading security protocols protecting your valuable assets.',
-    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=Security' },
+    icon: Clock,
+    title: 'Disponible 24/7/365',
+    description: 'Nunca pierdas una llamada. Tu agente trabaja día y noche, incluidos festivos.',
+    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=24-7' },
   },
   {
     icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock to ensure seamless operations.',
-    image: { src: 'https://placehold.co/800x600/f43f5e/ffffff?text=Support' },
+    title: 'Soporte Dedicado',
+    description: 'Equipo de soporte en español listo para ayudarte cuando lo necesites.',
+    image: { src: 'https://placehold.co/800x600/f43f5e/ffffff?text=Soporte' },
   },
 ];
 

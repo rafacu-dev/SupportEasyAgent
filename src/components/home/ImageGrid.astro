@@ -6,117 +6,241 @@ import ImageReveal from '@components/react/ImageReveal';
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <div class="inline-block px-4 py-2 mb-4 bg-rose-100 text-rose-800 text-sm font-semibold rounded-full">
-        Our Infrastructure
+        Sectores que Atendemos
       </div>
       <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-        World-Class <span class="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-rose-600">Facilities</span>
+        Para Cualquier <span class="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-rose-600">Tipo de Negocio</span>
       </h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-        State-of-the-art infrastructure and cutting-edge technology designed for 
-        operational excellence across all our global locations.
+        EasyAgent se adapta perfectamente a tu industria con configuraciones específicas para cada sector.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Large featured image -->
-      <div class="md:row-span-2">
-        <ImageReveal client:load delay={0}>
-          <div class="relative h-full group overflow-hidden rounded-2xl shadow-xl">
-            <img 
-              src="https://placehold.co/1200x800/475569/ffffff?text=Automated+Warehouse"
-              alt="Automated warehouse with modern robotics"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              width="1200"
-              height="800"
-            />
-            <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-              <h3 class="text-2xl font-bold mb-2">Automated Warehousing</h3>
-              <p class="text-gray-200">Advanced robotics and AI-powered inventory management</p>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Construcción -->
+      <ImageReveal client:load delay={0}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/dc2626/ffffff?text=Construccion"
+            alt="Construcción y contratistas"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">🏗️ Construcción</h3>
+            <p class="text-sm text-gray-200">Agenda estimaciones mientras trabajas</p>
           </div>
-        </ImageReveal>
-      </div>
+        </div>
+      </ImageReveal>
 
+      <!-- Peluquería -->
       <ImageReveal client:load delay={0.1}>
-        <div class="relative h-64 lg:h-auto group overflow-hidden rounded-2xl shadow-xl">
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
           <img 
-            src="https://placehold.co/800x600/475569/ffffff?text=Fleet+Management"
-            alt="Fleet of modern delivery trucks"
+            src="https://placehold.co/800x600/f43f5e/ffffff?text=Peluqueria"
+            alt="Salón de belleza y spa"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             width="800"
             height="600"
           />
           <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-xl font-bold mb-1">Fleet Management</h3>
-            <p class="text-sm text-gray-200">Modern vehicles, optimized routes</p>
+            <h3 class="text-xl font-bold mb-1">💇 Peluquería & Spa</h3>
+            <p class="text-sm text-gray-200">Reservas automáticas 24/7</p>
           </div>
         </div>
       </ImageReveal>
 
+      <!-- Jardinería -->
       <ImageReveal client:load delay={0.2}>
-        <div class="relative h-64 lg:h-auto group overflow-hidden rounded-2xl shadow-xl">
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
           <img 
-            src="https://placehold.co/800x600/475569/ffffff?text=Manufacturing"
-            alt="Manufacturing floor with precision equipment"
+            src="https://placehold.co/800x600/dc2626/ffffff?text=Jardineria"
+            alt="Servicios de jardinería y paisajismo"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             width="800"
             height="600"
           />
           <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-xl font-bold mb-1">Manufacturing</h3>
-            <p class="text-sm text-gray-200">ISO-certified production lines</p>
+            <h3 class="text-xl font-bold mb-1">🌿 Jardinería</h3>
+            <p class="text-sm text-gray-200">Coordina mantenimientos y proyectos</p>
           </div>
         </div>
       </ImageReveal>
 
-      <div class="lg:row-start-3">        
-        <ImageReveal client:load delay={0.3}>
-          <div class="lg:col-span-2 relative h-64 lg:h-auto group overflow-hidden rounded-2xl shadow-xl">
-            <img 
-              src="https://placehold.co/1200x600/475569/ffffff?text=Command+Center"
-              alt="Control center with real-time monitoring"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              width="1200"
-              height="600"
-            />
-            <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 class="text-xl font-bold mb-1">Command Center</h3>
-              <p class="text-sm text-gray-200">Real-time visibility and control across all operations</p>
-            </div>
+      <!-- Marketing -->
+      <ImageReveal client:load delay={0.3}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/f43f5e/ffffff?text=Marketing"
+            alt="Agencias de marketing y publicidad"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">📱 Marketing</h3>
+            <p class="text-sm text-gray-200">Califica leads y agenda reuniones</p>
           </div>
-        </ImageReveal>
-      </div>
-      <div class="lg:row-start-2 lg:col-start-2 lg:row-span-2 lg:col-span-2">        
-        <ImageReveal client:load delay={0.4}>
-          <div class="relative h-64 lg:h-auto group overflow-hidden rounded-2xl shadow-xl">
-            <img 
-              src="https://placehold.co/800x600/475569/ffffff?text=Distribution+Hub"
-              alt="Distribution center with sorting systems"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              width="800"
-              height="600"
-            />
-            <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 class="text-xl font-bold mb-1">Distribution Hub</h3>
-              <p class="text-sm text-gray-200">High-speed sorting and cross-docking</p>
-            </div>
+        </div>
+      </ImageReveal>
+
+      <!-- Mecánica -->
+      <ImageReveal client:load delay={0.4}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/dc2626/ffffff?text=Mecanica"
+            alt="Talleres mecánicos automotrices"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">🚗 Mecánica</h3>
+            <p class="text-sm text-gray-200">Recibe solicitudes de servicio</p>
           </div>
-        </ImageReveal>
-      </div>
+        </div>
+      </ImageReveal>
+
+      <!-- Eventos -->
+      <ImageReveal client:load delay={0.5}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/f43f5e/ffffff?text=Eventos"
+            alt="Organización de eventos y fiestas"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">🎉 Eventos & Fiestas</h3>
+            <p class="text-sm text-gray-200">Cotiza y reserva espacios</p>
+          </div>
+        </div>
+      </ImageReveal>
+
+      <!-- Limpieza -->
+      <ImageReveal client:load delay={0.6}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/dc2626/ffffff?text=Limpieza"
+            alt="Servicios de limpieza profesional"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">🧹 Limpieza</h3>
+            <p class="text-sm text-gray-200">Agenda servicios residenciales</p>
+          </div>
+        </div>
+      </ImageReveal>
+
+      <!-- Plomería -->
+      <ImageReveal client:load delay={0.7}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/f43f5e/ffffff?text=Plomeria"
+            alt="Servicios de plomería"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">🔧 Plomería</h3>
+            <p class="text-sm text-gray-200">Atiende emergencias 24/7</p>
+          </div>
+        </div>
+      </ImageReveal>
+
+      <!-- Aire Acondicionado -->
+      <ImageReveal client:load delay={0.8}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/dc2626/ffffff?text=HVAC"
+            alt="Servicios de HVAC y aire acondicionado"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">❄️ Aire Acondicionado</h3>
+            <p class="text-sm text-gray-200">Instalación y mantenimiento</p>
+          </div>
+        </div>
+      </ImageReveal>
+
+      <!-- Electricidad -->
+      <ImageReveal client:load delay={0.9}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/f43f5e/ffffff?text=Electricidad"
+            alt="Servicios eléctricos profesionales"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">⚡ Electricidad</h3>
+            <p class="text-sm text-gray-200">Cotizaciones y urgencias</p>
+          </div>
+        </div>
+      </ImageReveal>
+
+      <!-- Control de Plagas -->
+      <ImageReveal client:load delay={1.0}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/dc2626/ffffff?text=Plagas"
+            alt="Control de plagas y fumigación"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">🐛 Control de Plagas</h3>
+            <p class="text-sm text-gray-200">Inspecciones y tratamientos</p>
+          </div>
+        </div>
+      </ImageReveal>
+
+      <!-- Más Sectores -->
+      <ImageReveal client:load delay={1.1}>
+        <div class="relative h-64 group overflow-hidden rounded-2xl shadow-xl">
+          <img 
+            src="https://placehold.co/800x600/f43f5e/ffffff?text=Mas+Sectores"
+            alt="Y muchos sectores más"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width="800"
+            height="600"
+          />
+          <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-xl font-bold mb-1">✨ Y Muchos Más</h3>
+            <p class="text-sm text-gray-200">Personalizable para tu negocio</p>
+          </div>
+        </div>
+      </ImageReveal>
     </div>
     
     <!-- Bottom CTA -->
     <div class="text-center mt-16">
       <a 
-        href="/facilities" 
+        href="#contact" 
         class="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-linear-to-r from-rose-600 to-rose-700 hover:from-rose-700 hover:to-rose-800 rounded-lg shadow-lg hover:shadow-xl transition-all group"
       >
-        Tour Our Facilities
+        Empezar Ahora
         <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
