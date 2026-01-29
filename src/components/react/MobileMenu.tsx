@@ -23,7 +23,7 @@ export default function MobileMenu() {
               <Dialog.Close asChild key={item.href}>
                 <a
                   href={item.href}
-                  className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
+                  className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all"
                 >
                   {item.name}
                 </a>
@@ -33,7 +33,7 @@ export default function MobileMenu() {
               <Dialog.Close asChild>
                 <a
                   href="/rfq"
-                  className="block text-center px-6 py-3 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-md transition-all"
+                  className="block text-center px-6 py-3 text-sm font-semibold text-white bg-linear-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-lg shadow-md transition-all"
                 >
                   Request Quote
                 </a>

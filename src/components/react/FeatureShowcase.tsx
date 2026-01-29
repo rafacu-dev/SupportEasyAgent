@@ -6,37 +6,37 @@ const features = [
     icon: Warehouse,
     title: 'Advanced Warehousing',
     description: 'Climate-controlled facilities with automated inventory systems and 24/7 security.',
-    image: { src: 'https://placehold.co/800x600/3b82f6/ffffff?text=Warehousing' },
+    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=Warehousing' },
   },
   {
     icon: Truck,
     title: 'Fast Transportation',
     description: 'Multi-modal logistics network ensuring rapid delivery across all destinations.',
-    image: { src: 'https://placehold.co/800x600/14b8a6/ffffff?text=Transportation' },
+    image: { src: 'https://placehold.co/800x600/f43f5e/ffffff?text=Transportation' },
   },
   {
     icon: Package,
     title: 'Quality Manufacturing',
     description: 'ISO-certified production with precision engineering and quality control.',
-    image: { src: 'https://placehold.co/800x600/3b82f6/ffffff?text=Manufacturing' },
+    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=Manufacturing' },
   },
   {
     icon: BarChart3,
     title: 'Real-Time Analytics',
     description: 'Complete supply chain visibility with advanced tracking and reporting.',
-    image: { src: 'https://placehold.co/800x600/14b8a6/ffffff?text=Analytics' },
+    image: { src: 'https://placehold.co/800x600/f43f5e/ffffff?text=Analytics' },
   },
   {
     icon: Shield,
     title: 'Secure Operations',
     description: 'Industry-leading security protocols protecting your valuable assets.',
-    image: { src: 'https://placehold.co/800x600/3b82f6/ffffff?text=Security' },
+    image: { src: 'https://placehold.co/800x600/dc2626/ffffff?text=Security' },
   },
   {
     icon: Headphones,
     title: '24/7 Support',
     description: 'Dedicated teams available around the clock to ensure seamless operations.',
-    image: { src: 'https://placehold.co/800x600/14b8a6/ffffff?text=Support' },
+    image: { src: 'https://placehold.co/800x600/f43f5e/ffffff?text=Support' },
   },
 ];
 
@@ -73,7 +73,7 @@ export default function FeatureShowcase() {
                 transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
                 className="absolute top-4 right-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg"
               >
-                <feature.icon className="w-6 h-6 text-blue-600" />
+                <feature.icon className="w-6 h-6 text-red-600" />
               </motion.div>
             </div>
 
