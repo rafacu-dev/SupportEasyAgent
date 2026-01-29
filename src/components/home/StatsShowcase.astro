@@ -1,18 +1,16 @@
 ---
-import { Image } from 'astro:assets';
 import AnimatedStats from '../react/AnimatedStats';
-import logisticsNetworkImg from '@assets/photo-1578575437130-527eed3abbec.jpg';
 ---
 
 <section class="relative py-24 overflow-hidden">
   <!-- Background -->
   <div class="absolute inset-0">
-    <Image 
-      src={logisticsNetworkImg}
+    <img 
+      src="https://placehold.co/2070x1380/1e293b/ffffff?text=Global+Network"
       alt="Global logistics network"
       class="w-full h-full object-cover"
-      width={2070}
-      height={1380}
+      width="2070"
+      height="1380"
     />
     <div class="absolute inset-0 bg-slate-900/90"></div>
   </div>

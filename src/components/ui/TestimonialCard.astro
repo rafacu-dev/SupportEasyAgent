@@ -1,12 +1,10 @@
 ---
-import { Image } from 'astro:assets';
-
 interface Props {
   testimonial: {
     quote: string;
     name: string;
     role: string;
-    image: ImageMetadata;
+    imageSrc: string;
     ringColor: string;
   };
   variant?: 'default' | 'home';
@@ -48,12 +46,12 @@ const roleClasses = variant === 'home'
   </p>
   <div class="flex items-center mt-auto">
     <div class={`w-12 h-12 rounded-full overflow-hidden mr-4 ring-2 ${testimonial.ringColor}`}>
-      <Image 
-        src={testimonial.image}
+      <img 
+        src={testimonial.imageSrc}
         alt={testimonial.name}
         class="w-full h-full object-cover"
-        width={48}
-        height={48}
+        width="48"
+        height="48"
       />
     </div>
     <div>

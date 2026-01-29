@@ -1,16 +1,9 @@
 ---
-import { Image } from 'astro:assets';
-
-import discoveryImg from '@assets/photo-1454165804606-c3d57bc86b40.jpg';
-import implementationImg from '@assets/photo-1522071820081-009f0129c71c.jpg';
-import optimizationImg from '@assets/photo-1551288049-bebda4e38f71.jpg';
-import supportGrowthImg from '@assets/photo-1552664730-d307ca884978.jpg';
-
 interface Step {
   number: number;
   title: string;
   description: string;
-  image: ImageMetadata;
+  imageSrc: string;
   alt: string;
   hoverBorder: string;
   gradient: string;
@@ -22,7 +15,7 @@ const steps = [
     number: 1,
     title: "Discovery & Planning",
     description: "We analyze your current operations, identify pain points, and design a customized solution that aligns with your business goals.",
-    image: discoveryImg,
+    imageSrc: "https://placehold.co/800x400/3b82f6/ffffff?text=Discovery+%26+Planning",
     alt: "Business planning and strategy",
     hoverBorder: "hover:border-blue-500",
     gradient: "from-blue-600/90",
@@ -32,7 +25,7 @@ const steps = [
     number: 2,
     title: "Implementation",
     description: "Our expert team sets up your infrastructure, integrates systems, and ensures seamless onboarding with minimal disruption.",
-    image: implementationImg,
+    imageSrc: "https://placehold.co/800x400/14b8a6/ffffff?text=Implementation",
     alt: "Team collaboration and implementation",
     hoverBorder: "hover:border-teal-500",
     gradient: "from-teal-600/90",
@@ -42,7 +35,7 @@ const steps = [
     number: 3,
     title: "Optimization",
     description: "Continuous monitoring and data-driven improvements ensure your operations become more efficient and cost-effective over time.",
-    image: optimizationImg,
+    imageSrc: "https://placehold.co/800x400/3b82f6/ffffff?text=Optimization",
     alt: "Data analytics and optimization",
     hoverBorder: "hover:border-blue-500",
     gradient: "from-blue-600/90",
@@ -52,7 +45,7 @@ const steps = [
     number: 4,
     title: "Support & Growth",
     description: "Dedicated account management and 24/7 support help you scale operations and adapt to changing market demands.",
-    image: supportGrowthImg,
+    imageSrc: "https://placehold.co/800x400/14b8a6/ffffff?text=Support+%26+Growth",
     alt: "Customer support and growth",
     hoverBorder: "hover:border-teal-500",
     gradient: "from-teal-600/90",
@@ -86,12 +79,12 @@ const arrowPath = "M9 5l7 7-7 7";
           <div class="relative h-full">
             <div class={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border-2 border-slate-100 ${step.hoverBorder} relative z-10 flex flex-col h-full`}>
               <div class="relative h-48 overflow-hidden">
-                <Image 
-                  src={step.image}
+                <img 
+                  src={step.imageSrc}
                   alt={step.alt}
                   class="w-full h-full object-cover"
-                  width={800}
-                  height={400}
+                  width="800"
+                  height="400"
                 />
                 <div class={`absolute inset-0 bg-linear-to-t ${step.gradient} to-transparent`}></div>
                 <div class={`absolute top-4 right-4 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center ${step.textColor} font-bold text-xl shadow-lg`}>

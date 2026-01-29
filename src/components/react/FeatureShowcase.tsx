@@ -1,49 +1,42 @@
 import { motion } from 'motion/react';
 import { Warehouse, Truck, Package, BarChart3, Shield, Headphones } from 'lucide-react';
 
-import warehouseImg from '@assets/photo-1553413077-190dd305871c.jpg';
-import truckImg from '@assets/photo-1601584115197-04ecc0da31d7.jpg';
-import packageImg from '@assets/photo-1581091226825-a6a2a5aee158.jpg';
-import barChart3Img from '@assets/photo-1551288049-bebda4e38f71.jpg';
-import shieldImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
-import headphonesImg from '@assets/photo-1486312338219-ce68d2c6f44d.jpg';
-
 const features = [
   {
     icon: Warehouse,
     title: 'Advanced Warehousing',
     description: 'Climate-controlled facilities with automated inventory systems and 24/7 security.',
-    image: warehouseImg,
+    image: { src: 'https://placehold.co/800x600/3b82f6/ffffff?text=Warehousing' },
   },
   {
     icon: Truck,
     title: 'Fast Transportation',
     description: 'Multi-modal logistics network ensuring rapid delivery across all destinations.',
-    image: truckImg,
+    image: { src: 'https://placehold.co/800x600/14b8a6/ffffff?text=Transportation' },
   },
   {
     icon: Package,
     title: 'Quality Manufacturing',
     description: 'ISO-certified production with precision engineering and quality control.',
-    image: packageImg,
+    image: { src: 'https://placehold.co/800x600/3b82f6/ffffff?text=Manufacturing' },
   },
   {
     icon: BarChart3,
     title: 'Real-Time Analytics',
     description: 'Complete supply chain visibility with advanced tracking and reporting.',
-    image: barChart3Img,
+    image: { src: 'https://placehold.co/800x600/14b8a6/ffffff?text=Analytics' },
   },
   {
     icon: Shield,
     title: 'Secure Operations',
     description: 'Industry-leading security protocols protecting your valuable assets.',
-    image: shieldImg,
+    image: { src: 'https://placehold.co/800x600/3b82f6/ffffff?text=Security' },
   },
   {
     icon: Headphones,
     title: '24/7 Support',
     description: 'Dedicated teams available around the clock to ensure seamless operations.',
-    image: headphonesImg,
+    image: { src: 'https://placehold.co/800x600/14b8a6/ffffff?text=Support' },
   },
 ];
 

@@ -1,0 +1,45 @@
+---
+import { getLangFromUrl } from '@i18n/utils';
+import { ui } from '@i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+
+// Language switcher component
+const currentPath = Astro.url.pathname;
+const isEnglish = lang === 'en';
+
+// Generate alternate URL
+
+function getAlternateUrl(currentPath: string, targetLang: string) {
+  const pathParts = currentPath.split('/').filter(Boolean);
+
+  // Si el idioma destino es inglés, siempre redirige a la raíz
+  if (targetLang === 'en') {
+    return '/';
+  }
+
+  // Si el idioma destino es español y ya está en la ruta, reemplaza
+  if (pathParts[0] === 'en' || pathParts[0] === 'es') {
+    pathParts[0] = targetLang;
+    return `/${pathParts.join('/')}`;
+  }
+
+  // Si no hay idioma en la ruta y el destino es español, agrega el prefijo
+  return `/${targetLang}${currentPath}`;
+}
+
+const alternateUrl = isEnglish ? getAlternateUrl(currentPath, 'es') : getAlternateUrl(currentPath, 'en');
+---
+
+<div class="flex items-center gap-2">
+  <a 
+    href={alternateUrl}
+    class="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md hover:bg-slate-100 transition-colors"
+    aria-label={isEnglish ? 'Cambiar a español' : 'Switch to English'}
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+    </svg>
+    <span>{isEnglish ? 'ES' : 'EN'}</span>
+  </a>
+</div>
