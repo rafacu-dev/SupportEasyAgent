@@ -108,7 +108,7 @@ export const ui = {
     'cta.indicator2.label': 'Ahorro vs Humano',
     'cta.indicator3.value': '24/7',
     'cta.indicator3.label': 'Soporte',
-    'cta.indicator4.value': 'Nacional',
+    'cta.indicator4.value': 'Cobertura Nacional',
     'cta.indicator4.label': 'Cobertura',
     
     // Features
@@ -268,7 +268,7 @@ export const ui = {
     'cta.indicator2.label': 'Savings vs Human',
     'cta.indicator3.value': '24/7',
     'cta.indicator3.label': 'Support',
-    'cta.indicator4.value': 'Nationwide',
+    'cta.indicator4.value': 'Nationwide Coverage',
     'cta.indicator4.label': 'Coverage',
     
     // Features
