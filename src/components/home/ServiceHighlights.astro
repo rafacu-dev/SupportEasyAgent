@@ -21,6 +21,22 @@ const t = useTranslations(lang);
     </div>
   </div>
 
-  <FeatureShowcase client:load />
+  <FeatureShowcase 
+    client:load 
+    translations={{
+      feature1Title: t('features.feature1.title'),
+      feature1Description: t('features.feature1.description'),
+      feature1DetailedDescription: t('features.feature1.detailedDescription'),
+      feature2Title: t('features.feature2.title'),
+      feature2Description: t('features.feature2.description'),
+      feature2DetailedDescription: t('features.feature2.detailedDescription'),
+      feature3Title: t('features.feature3.title'),
+      feature3Description: t('features.feature3.description'),
+      feature3DetailedDescription: t('features.feature3.detailedDescription'),
+      feature4Title: t('features.feature4.title'),
+      feature4Description: t('features.feature4.description'),
+      feature4DetailedDescription: t('features.feature4.detailedDescription'),
+    }}
+  />
 </section>
 

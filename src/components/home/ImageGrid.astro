@@ -1,5 +1,9 @@
 ---
 import IndustryCard from '@components/react/IndustryCard';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 // Import industry images
 import constructionImg from '@assets/industries/construction.webp';
@@ -16,18 +20,18 @@ import plagasImg from '@assets/industries/plagas.webp';
 import moreImg from '@assets/industries/more.webp';
 
 const industries = [
-  { title: 'Construcción', description: 'Agenda estimaciones mientras trabajas', emoji: '🏗️', image: constructionImg.src },
-  { title: 'Peluquería & Spa', description: 'Reservas automáticas 24/7', emoji: '💇', image: peluqueriaImg.src },
-  { title: 'Jardinería', description: 'Coordina mantenimientos y proyectos', emoji: '🌿', image: jardineriaImg.src },
-  { title: 'Marketing', description: 'Califica leads y agenda reuniones', emoji: '📱', image: marketingImg.src },
-  { title: 'Mecánica', description: 'Recibe solicitudes de servicio', emoji: '🚗', image: mecanicaImg.src },
-  { title: 'Eventos & Fiestas', description: 'Cotiza y reserva espacios', emoji: '🎉', image: eventosImg.src },
-  { title: 'Limpieza', description: 'Agenda servicios residenciales', emoji: '🧹', image: limpiezaImg.src },
-  { title: 'Plomería', description: 'Atiende emergencias 24/7', emoji: '🔧', image: plomeriaImg.src },
-  { title: 'Aire Acondicionado', description: 'Instalación y mantenimiento', emoji: '❄️', image: hvacImg.src },
-  { title: 'Electricidad', description: 'Cotizaciones y urgencias', emoji: '⚡', image: electricidadImg.src },
-  { title: 'Control de Plagas', description: 'Inspecciones y tratamientos', emoji: '🐛', image: plagasImg.src },
-  { title: 'Y Muchos Más', description: 'Personalizable para tu negocio', emoji: '✨', image: moreImg.src },
+  { title: t('industries.construction.title'), description: t('industries.construction.description'), emoji: '🏗️', image: constructionImg.src },
+  { title: t('industries.salon.title'), description: t('industries.salon.description'), emoji: '💇', image: peluqueriaImg.src },
+  { title: t('industries.landscaping.title'), description: t('industries.landscaping.description'), emoji: '🌿', image: jardineriaImg.src },
+  { title: t('industries.marketing.title'), description: t('industries.marketing.description'), emoji: '📱', image: marketingImg.src },
+  { title: t('industries.automotive.title'), description: t('industries.automotive.description'), emoji: '🚗', image: mecanicaImg.src },
+  { title: t('industries.events.title'), description: t('industries.events.description'), emoji: '🎉', image: eventosImg.src },
+  { title: t('industries.cleaning.title'), description: t('industries.cleaning.description'), emoji: '🧹', image: limpiezaImg.src },
+  { title: t('industries.plumbing.title'), description: t('industries.plumbing.description'), emoji: '🔧', image: plomeriaImg.src },
+  { title: t('industries.hvac.title'), description: t('industries.hvac.description'), emoji: '❄️', image: hvacImg.src },
+  { title: t('industries.electrical.title'), description: t('industries.electrical.description'), emoji: '⚡', image: electricidadImg.src },
+  { title: t('industries.pestControl.title'), description: t('industries.pestControl.description'), emoji: '🐛', image: plagasImg.src },
+  { title: t('industries.more.title'), description: t('industries.more.description'), emoji: '✨', image: moreImg.src },
 ];
 ---
 
@@ -35,13 +39,13 @@ const industries = [
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <div class="inline-block px-4 py-2 mb-4 bg-amber-100 text-amber-800 text-sm font-semibold rounded-full">
-        Sectores que Atendemos
+        {t('imageGrid.badge')}
       </div>
       <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-        Para Cualquier <span class="text-transparent bg-clip-text bg-linear-to-r from-orange-600 to-amber-600">Tipo de Negocio</span>
+        {t('imageGrid.title')} <span class="text-transparent bg-clip-text bg-linear-to-r from-orange-600 to-amber-600">{t('imageGrid.titleHighlight')}</span>
       </h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-        EasyAgent se adapta perfectamente a tu industria con configuraciones específicas para cada sector.
+        {t('imageGrid.description')}
       </p>
     </div>
 

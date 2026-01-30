@@ -7,38 +7,54 @@ import calendarPortrait from '@assets/calendar-portrait.png';
 import callDetailsPortrait from '@assets/call-details-portrait.png';
 import analyticsPortrait from '@assets/analytics-portrait.png';
 
-const features = [
-  {
-    icon: Phone,
-    title: 'Agente de Voz con IA',
-    description: 'Tu asistente virtual atiende llamadas 24/7 con voz natural y conversaciones profesionales.',
-    image: phonePortrait.src,
-    detailedDescription: 'Nuestro agente de IA utiliza procesamiento de lenguaje natural avanzado para mantener conversaciones fluidas y naturales. Puede responder preguntas frecuentes, agendar citas, tomar mensajes y transferir llamadas cuando sea necesario. Todo con una voz profesional que representa tu marca las 24 horas del día.'
-  },
-  {
-    icon: Calendar,
-    title: 'Agenda Automática',
-    description: 'El agente programa citas automáticamente y envía recordatorios a ti y tus clientes.',
-    image: calendarPortrait.src,
-    detailedDescription: 'Sistema de calendario inteligente que se sincroniza con tu agenda existente. El agente verifica disponibilidad en tiempo real, programa citas según tus preferencias, y envía confirmaciones y recordatorios automáticos vía SMS y email. Reduce las ausencias hasta un 80%.'
-  },
-  {
-    icon: MessageSquare,
-    title: 'Transcripciones Completas',
-    description: 'Recibe transcripciones detalladas de cada llamada con análisis de sentimiento incluido.',
-    image: callDetailsPortrait.src,
-    detailedDescription: 'Cada llamada se transcribe automáticamente con precisión del 95%+. Incluye análisis de sentimiento para identificar clientes satisfechos o preocupados, palabras clave extraídas automáticamente, y métricas de calidad. Busca y encuentra cualquier conversación en segundos.'
-  },
-  {
-    icon: BarChart3,
-    title: 'Análisis en Tiempo Real',
-    description: 'Visualiza estadísticas de llamadas, horarios pico y métricas de rendimiento al instante.',
-    image: analyticsPortrait.src,
-    detailedDescription: 'Dashboard completo con métricas clave: volumen de llamadas por hora/día/mes, tasa de conversión, duración promedio, tipos de solicitudes más comunes, y tendencias de crecimiento. Exporta reportes profesionales en PDF para análisis detallado.'
-  },
-];
+interface FeatureShowcaseProps {
+  translations: {
+    feature1Title: string;
+    feature1Description: string;
+    feature1DetailedDescription: string;
+    feature2Title: string;
+    feature2Description: string;
+    feature2DetailedDescription: string;
+    feature3Title: string;
+    feature3Description: string;
+    feature3DetailedDescription: string;
+    feature4Title: string;
+    feature4Description: string;
+    feature4DetailedDescription: string;
+  };
+}
 
-export default function FeatureShowcase() {
+export default function FeatureShowcase({ translations }: FeatureShowcaseProps) {
+  const features = [
+    {
+      icon: Phone,
+      title: translations.feature1Title,
+      description: translations.feature1Description,
+      image: phonePortrait.src,
+      detailedDescription: translations.feature1DetailedDescription
+    },
+    {
+      icon: Calendar,
+      title: translations.feature2Title,
+      description: translations.feature2Description,
+      image: calendarPortrait.src,
+      detailedDescription: translations.feature2DetailedDescription
+    },
+    {
+      icon: MessageSquare,
+      title: translations.feature3Title,
+      description: translations.feature3Description,
+      image: callDetailsPortrait.src,
+      detailedDescription: translations.feature3DetailedDescription
+    },
+    {
+      icon: BarChart3,
+      title: translations.feature4Title,
+      description: translations.feature4Description,
+      image: analyticsPortrait.src,
+      detailedDescription: translations.feature4DetailedDescription
+    },
+  ];
   return (
     <div className="space-y-0">
       {features.map((feature, index) => {
