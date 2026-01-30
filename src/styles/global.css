@@ -1,12 +1,56 @@
 @import "tailwindcss";
 
+/* Color Theme Variables - Business Professional with Orange Accent */
+@theme {
+  /* Orange scale (replaces red) - matching intensity levels */
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-300: #fdba74;
+  --color-orange-400: #fb923c; /* Similar a red-400 (#f87171) */
+  --color-orange-500: #f97316; /* Similar a red-500 (#ef4444) */
+  --color-orange-600: #ff4800; /* Primary - Similar a red-600 (#dc2626) */
+  --color-orange-700: #c2410c; /* Similar a red-700 (#b91c1c) */
+  --color-orange-800: #9a3412; /* Similar a red-800 (#991b1b) */
+  --color-orange-900: #7c2d12; /* Similar a red-900 */
+  
+  /* Light Orange scale (replaces rose) */
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-200: #fde68a;
+  --color-amber-300: #fcd34d;
+  --color-amber-400: #fbbf24; /* Similar a rose-400 (#fb7185) */
+  --color-amber-500: #f59e0b; /* Similar a rose-500 (#f43f5e) */
+  --color-amber-600: #d97706; /* Similar a rose-600 (#e11d48) */
+  --color-amber-700: #b45309;
+  --color-amber-800: #92400e;
+  --color-amber-900: #78350f;
+
+  /* Secondary Blue scale */
+  --color-blue-500: #2E86C1;
+  --color-blue-600: #2874A6;
+  --color-blue-700: #1F618D;
+  
+  /* Semantic colors */
+  --color-success: #4CAF50;
+  --color-info: #2E86C1;
+  --color-warning: #FFA726;
+  --color-error: #FF6B6B;
+}
+
 /* Smooth scrolling */
 html {
   @apply scroll-smooth;
 }
 
 .nav-active {
-  @apply after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:bg-blue-300 hover:after:bg-transparent after:rounded-full;
+  @apply after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:rounded-full;
+  &::after {
+    background-color: var(--color-amber-400);
+  }
+  &:hover::after {
+    background-color: transparent;
+  }
 }
 
 /* Animations */
@@ -39,7 +83,7 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #2563eb, #0d9488);
+  background: linear-gradient(to right, var(--color-blue-500), var(--color-orange-600));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
