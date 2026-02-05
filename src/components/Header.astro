@@ -1,5 +1,5 @@
 ---
-import { Package } from 'lucide-react';
+import icon from '@assets/icon.png';
 import LanguageSwitcher from '@components/LanguageSwitcher.astro';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 
@@ -19,8 +19,8 @@ function localizeUrl(path: string): string {
     <!-- Logo -->
     <div class="flex items-center">
       <a href={localizeUrl('/')} class="flex items-center space-x-3 group">
-        <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-linear-to-br from-orange-600 to-amber-600 group-hover:scale-110 transition-transform">
-          <Package className="w-6 h-6 text-white" />
+        <div class="flex items-center justify-center w-10 h-10 group-hover:scale-110 transition-transform overflow-hidden">
+          <img src={icon.src} alt="EasyAgent Logo" class="w-10 h-10 object-contain" />
         </div>
         <span class="text-2xl font-bold bg-linear-to-r from-orange-800 to-amber-600 bg-clip-text text-transparent">
           EasyAgent
