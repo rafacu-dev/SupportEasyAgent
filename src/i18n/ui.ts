@@ -165,6 +165,8 @@ export const ui = {
     'footer.company': 'Empresa',
     'footer.contact': 'Contacto',
     'footer.rights': 'Todos los derechos reservados',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms of Service',
   },
   en: {
     // Navigation
@@ -325,5 +327,7 @@ export const ui = {
     'footer.company': 'Company',
     'footer.contact': 'Contact',
     'footer.rights': 'All rights reserved',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms of Service',
   }
 } as const;

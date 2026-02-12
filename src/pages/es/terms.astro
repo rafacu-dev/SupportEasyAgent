@@ -1,0 +1,18 @@
+---
+
+import { getLangFromUrl } from '@i18n/utils';
+import Footer from '@components/Footer.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import TermsContent from '@components/TermsContent.astro';
+const lang = getLangFromUrl(Astro.url);
+---
+<BaseLayout>
+  <section class="py-24 bg-white min-h-screen">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+        {lang === 'es' ? 'Términos de Servicio' : 'Terms of Service'}
+      </h1>
+      <TermsContent />
+    </div>
+  </section>
+</BaseLayout>
