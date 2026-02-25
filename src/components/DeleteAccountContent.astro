@@ -1,0 +1,107 @@
+---
+interface Props {
+  lang?: 'en' | 'es';
+}
+
+const { lang = 'en' } = Astro.props;
+---
+
+<div class="prose prose-lg text-slate-700">
+  {
+    lang === 'es' ? (
+      <>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Solicitud de eliminación de cuenta</h2>
+        <p class="mb-4">
+          Si quieres eliminar tu cuenta en <strong>EasyAgent by DreCom LLC</strong> (<a href="https://drecom.dev" target="_blank" rel="noopener noreferrer">drecom.dev</a>), aquí te mostramos los pasos exactos dentro de la app.
+        </p>
+        <p class="mb-4">
+          También puedes compartir este enlace para consultar esta guía en cualquier momento: <a href="https://easyagent.drecom.dev/delete-account/" target="_blank" rel="noopener noreferrer">https://easyagent.drecom.dev/delete-account/</a>
+        </p>
+
+        <div class="my-8"></div>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2">Pasos dentro de la app (flujo real)</h3>
+        <ol class="mb-4 list-decimal list-inside space-y-2">
+          <li>Abre la app y espera a estar en la pantalla principal <strong>Inicio (Home)</strong>.</li>
+          <li>En la barra inferior, toca la pestaña <strong>Ajustes</strong> (icono de engrane).</li>
+          <li>En Ajustes, desplázate hacia abajo hasta la sección <strong>Zona de Peligro</strong>.</li>
+          <li>Toca la opción en rojo <strong>Eliminar Empresa</strong> (fila con icono de papelera).</li>
+          <li>Se abre una alerta de confirmación destructiva del sistema.</li>
+          <li>En la alerta verás dos botones: <strong>Cancelar</strong> y <strong>Eliminar Empresa</strong>.</li>
+          <li>Para aceptar la eliminación de la cuenta (en esta UI se maneja como “empresa”), toca <strong>Eliminar Empresa</strong>.</li>
+        </ol>
+
+        <div class="my-8"></div>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2">Datos que se eliminan</h3>
+        <ul class="mb-4 list-disc list-inside space-y-2">
+          <li>Perfil de cuenta/empresa (correo, nombre de empresa, sector).</li>
+          <li>Contactos y datos de clientes guardados en la app.</li>
+          <li>Citas y datos operativos asociados a la cuenta.</li>
+          <li>Historial de llamadas y metadatos operativos vinculados a la cuenta.</li>
+          <li>Mensajes y contenido transaccional asociado al número del servicio.</li>
+        </ul>
+
+        <div class="my-8"></div>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2">Retención de datos</h3>
+        <p class="mb-4">
+          No se mantiene ningún dato por períodos adicionales después de confirmar la eliminación de la cuenta.
+        </p>
+        <p class="mb-4">
+          Todos los datos vinculados a la cuenta se eliminan como parte del proceso de borrado.
+        </p>
+
+        <div class="my-8"></div>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2">Soporte</h3>
+        <p class="mb-4">
+          Si necesitas ayuda con la eliminación de tu cuenta, escríbenos a <strong>drecom.projects@gmail.com</strong>.
+        </p>
+      </>
+    ) : (
+      <>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Account Deletion Request</h2>
+        <p class="mb-4">
+          If you want to delete your account in <strong>EasyAgent by DreCom LLC</strong> (<a href="https://drecom.dev" target="_blank" rel="noopener noreferrer">drecom.dev</a>), this guide shows the exact in-app steps.
+        </p>
+        <p class="mb-4">
+          You can also share this link to revisit the guide anytime: <a href="https://easyagent.drecom.dev/delete-account/" target="_blank" rel="noopener noreferrer">https://easyagent.drecom.dev/delete-account/</a>
+        </p>
+
+        <div class="my-8"></div>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2">In-app steps (actual UI flow)</h3>
+        <ol class="mb-4 list-decimal list-inside space-y-2">
+          <li>Open the app and make sure you are on the main <strong>Home</strong> screen.</li>
+          <li>In the bottom tab bar, tap <strong>Settings</strong> (gear icon).</li>
+          <li>In Settings, scroll down to the <strong>Danger Zone</strong> section.</li>
+          <li>Tap the red <strong>Delete Company</strong> option (trash icon row).</li>
+          <li>A native destructive confirmation alert appears.</li>
+          <li>The alert shows two actions: <strong>Cancel</strong> and <strong>Delete Company</strong>.</li>
+          <li>To confirm account deletion (handled in this UI as company deletion), tap <strong>Delete Company</strong>.</li>
+        </ol>
+
+        <div class="my-8"></div>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2">Data that will be deleted</h3>
+        <ul class="mb-4 list-disc list-inside space-y-2">
+          <li>Account/company profile data (email, company name, business sector).</li>
+          <li>Stored contacts and client data in the app.</li>
+          <li>Appointments and operational data linked to the account.</li>
+          <li>Call history and operational metadata associated with the account.</li>
+          <li>Messages and transactional content tied to the service number.</li>
+        </ul>
+
+        <div class="my-8"></div>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2">Data retention</h3>
+        <p class="mb-4">
+          No data is retained for additional periods after account deletion is confirmed.
+        </p>
+        <p class="mb-4">
+          All account-linked data is deleted as part of the deletion process.
+        </p>
+
+        <div class="my-8"></div>
+        <h3 class="text-xl font-semibold text-slate-800 mb-2">Support</h3>
+        <p class="mb-4">
+          If you need help with account deletion, contact us at <strong>drecom.projects@gmail.com</strong>.
+        </p>
+      </>
+    )
+  }
+</div>

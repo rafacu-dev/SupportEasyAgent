@@ -26,6 +26,10 @@ function localizeUrl(path: string): string {
           <a href={localizeUrl('/terms')} class="text-slate-400 hover:text-orange-400 transition-colors text-sm">
             {t('footer.terms')}
           </a>
+          <span class="text-slate-600">•</span>
+          <a href={localizeUrl('/delete-account')} class="text-slate-400 hover:text-orange-400 transition-colors text-sm">
+            {t('footer.deleteAccount')}
+          </a>
         </div>
         <p class="text-base text-white font-semibold mb-2">
           &copy; {new Date().getFullYear()} <a href="https://drecom.dev" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 transition-colors">DreCom LLC</a> • {t('footer.location')} • {t('footer.allRightsReserved')}

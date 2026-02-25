@@ -167,6 +167,7 @@ export const ui = {
     'footer.rights': 'Todos los derechos reservados',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
+    'footer.deleteAccount': 'Cómo elimino mi cuenta',
   },
   en: {
     // Navigation
@@ -329,5 +330,6 @@ export const ui = {
     'footer.rights': 'All rights reserved',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
+    'footer.deleteAccount': 'How do I delete my account',
   }
 } as const;
